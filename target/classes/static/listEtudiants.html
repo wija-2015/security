@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" >
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/style.css"/>
+</head>
+<body ng-app="myApp" ng-controller="ListEtudiantController">
+
+<div class="container">
+<div class="col-md-6"> 
+<div class="panel-info">
+<table class="table table-striped">
+<thead>
+<tr>
+<th>ID</th><th>Nom</th><th>Prénom</th><th>Naissance</th>
+</tr>
+</thead>
+<tbody>
+<tr ng-repeat="e in pageEtudiants.content">
+<td>{{e.idEtudant}}</td> 
+<td>{{e.nom}}</td>
+<td>{{e.prenom}}</td>
+<td>{{e.dateNaissance| date: 'yyyy-MM-dd'}}</td>
+</tr>
+</tbody>
+</table>
+</div> </div> </div> 
+
+<script type="text/javascript" src="js/angular.min.js"></script>
+<script type="text/javascript" src="js/myApp.js"></script>
+</body>
+</html>
